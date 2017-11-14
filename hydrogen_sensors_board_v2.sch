@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6521,7 +6521,7 @@ at 30/07/2012 17:45:58</description>
 <part name="C9" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="C10" library="adafruit" deviceset="C-US" device="C0603" value="10nF"/>
 <part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="20k"/>
-<part name="R13" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="40k"/>
+<part name="R13" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="39k"/>
 <part name="C11" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="E1" library="5555140-6 RJ11" deviceset="5555140-6" device=""/>
 </parts>
@@ -6534,7 +6534,7 @@ at 30/07/2012 17:45:58</description>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
 <instance part="U1" gate="U$1" x="119.38" y="132.08"/>
-<instance part="R1" gate="G$1" x="68.58" y="73.66"/>
+<instance part="R1" gate="G$1" x="69.85" y="73.66"/>
 <instance part="ISP1" gate="G$1" x="177.8" y="78.74"/>
 <instance part="Y1" gate="G$1" x="88.9" y="134.62" rot="R90"/>
 <instance part="C1" gate="G$1" x="71.12" y="132.08" rot="R270"/>
@@ -6646,7 +6646,7 @@ at 30/07/2012 17:45:58</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="64.77" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
 <label x="55.88" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -6835,7 +6835,7 @@ at 30/07/2012 17:45:58</description>
 <net name="N$2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RL"/>
-<wire x1="83.82" y1="73.66" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="73.66" x2="74.93" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
