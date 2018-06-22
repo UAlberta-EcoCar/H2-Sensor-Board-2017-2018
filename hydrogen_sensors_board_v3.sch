@@ -14030,7 +14030,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY6" library="supply2" deviceset="+UB" device=""/>
 <part name="C15" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="GND29" library="SparkFun" deviceset="GND" device=""/>
-<part name="L1" library="SparkFun" deviceset="INDUCTOR" device="0603" value="100uH"/>
+<part name="L1" library="SparkFun" deviceset="INDUCTOR" device="0603" value="10uH"/>
 <part name="C16" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+16" library="supply1" deviceset="+12V" device=""/>
