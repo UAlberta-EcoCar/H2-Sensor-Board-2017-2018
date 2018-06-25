@@ -15002,6 +15002,11 @@ Solder Jumper</text>
 5V can be sourced from either the on-board regulator, 
 or from the FCC ethernet connector.
 Default is from the on-board regulator.</text>
+<text x="-180.34" y="139.7" size="2.54" layer="97">Connected Remote H2 sensor to MCU, added pull-down resistor and low-pass filter.
+Added decoupling caps to H2 sensor inputs.
+Connected Aref on MCU to gnd via capacitor.
+Added LC network on AVcc pin.
+Decoupling caps are now closer to MCU on brd.</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="48.26" y="139.7" rot="MR0"/>
