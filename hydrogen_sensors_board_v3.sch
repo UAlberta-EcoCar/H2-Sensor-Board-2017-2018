@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -13615,10 +13616,10 @@ Source: ENG_CD_1445055_A.pdf</description>
 <wire x1="7.53" y1="4.06" x2="7.53" y2="-14.48" width="0.127" layer="21"/>
 <wire x1="-8.8" y1="4.06" x2="7.53" y2="4.06" width="0.127" layer="21"/>
 <pad name="1" x="-3.81" y="2.54" drill="1" shape="square"/>
-<pad name="2" x="-1.27" y="2.54" drill="1"/>
-<pad name="3" x="1.27" y="2.54" drill="1"/>
-<pad name="4" x="-2.54" y="0" drill="1"/>
-<pad name="5" x="0" y="0" drill="1"/>
+<pad name="3" x="-1.27" y="2.54" drill="1"/>
+<pad name="5" x="1.27" y="2.54" drill="1"/>
+<pad name="2" x="-2.54" y="0" drill="1"/>
+<pad name="4" x="0" y="0" drill="1"/>
 <pad name="6" x="2.54" y="0" drill="1"/>
 <pad name="SH1" x="-7.5" y="-9.4" drill="1.65"/>
 <pad name="SH2" x="6.22" y="-9.4" drill="1.65"/>
@@ -14792,9 +14793,7 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="R26" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="1k5"/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
-<part name="P+17" library="supply1" deviceset="+12V" device=""/>
 <part name="GND14" library="SparkFun" deviceset="GND" device=""/>
-<part name="P+18" library="supply1" deviceset="+5V" device=""/>
 <part name="P+19" library="supply1" deviceset="+12V" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
@@ -14875,6 +14874,7 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="GND39" library="SparkFun" deviceset="GND" device=""/>
 <part name="D1" library="adafruit" deviceset="DIODE" device="SMA" value="S1GTR"/>
 <part name="D2" library="adafruit" deviceset="DIODE" device="SMA" value="S1GTR"/>
+<part name="P+23" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15135,10 +15135,8 @@ Decoupling caps are now closer to MCU on brd.</text>
 </instance>
 <instance part="P+14" gate="1" x="509.778" y="155.194"/>
 <instance part="P+15" gate="1" x="509.27" y="139.7"/>
-<instance part="P+17" gate="1" x="434.34" y="146.05"/>
 <instance part="GND14" gate="1" x="378.46" y="109.22"/>
-<instance part="P+18" gate="1" x="384.556" y="151.384"/>
-<instance part="P+19" gate="1" x="391.16" y="146.05"/>
+<instance part="P+19" gate="1" x="383.54" y="151.13"/>
 <instance part="GND15" gate="1" x="63.5" y="270.256"/>
 <instance part="GND16" gate="1" x="50.8" y="295.656"/>
 <instance part="GND17" gate="1" x="76.2" y="295.656"/>
@@ -15256,6 +15254,7 @@ Decoupling caps are now closer to MCU on brd.</text>
 <attribute name="NAME" x="50.8" y="345.44" size="1.27" layer="95"/>
 <attribute name="VALUE" x="54.864" y="340.614" size="1.27" layer="96"/>
 </instance>
+<instance part="P+23" gate="1" x="389.89" y="146.05"/>
 </instances>
 <busses>
 </busses>
@@ -15309,18 +15308,6 @@ Decoupling caps are now closer to MCU on brd.</text>
 <pinref part="P+13" gate="1" pin="+5V"/>
 <wire x1="463.55" y1="356.87" x2="454.66" y2="356.87" width="0.1524" layer="91"/>
 <wire x1="454.66" y1="356.87" x2="454.66" y2="360.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+18" gate="1" pin="+5V"/>
-<wire x1="384.556" y1="148.844" x2="384.556" y2="148.59" width="0.1524" layer="91"/>
-<pinref part="E1" gate="G$1" pin="5"/>
-<label x="394.97" y="133.35" size="1.778" layer="95"/>
-<wire x1="384.556" y1="148.59" x2="384.556" y2="133.35" width="0.1524" layer="91"/>
-<wire x1="384.556" y1="133.35" x2="400.05" y2="133.35" width="0.1524" layer="91"/>
-<pinref part="E1" gate="G$1" pin="2"/>
-<label x="394.97" y="149.86" size="1.778" layer="95"/>
-<wire x1="400.05" y1="148.59" x2="384.556" y2="148.59" width="0.1524" layer="91"/>
-<junction x="384.556" y="148.59"/>
 </segment>
 <segment>
 <pinref part="P+1" gate="1" pin="+5V"/>
@@ -15398,6 +15385,17 @@ Decoupling caps are now closer to MCU on brd.</text>
 <wire x1="71.12" y1="113.284" x2="53.34" y2="113.284" width="0.1524" layer="91"/>
 <junction x="53.34" y="113.284"/>
 </segment>
+<segment>
+<pinref part="E1" gate="G$1" pin="3"/>
+<wire x1="389.89" y1="143.51" x2="400.05" y2="143.51" width="0.1524" layer="91"/>
+<pinref part="E1" gate="G$1" pin="4"/>
+<wire x1="400.05" y1="138.43" x2="389.89" y2="138.43" width="0.1524" layer="91"/>
+<wire x1="389.89" y1="138.43" x2="389.89" y2="143.51" width="0.1524" layer="91"/>
+<pinref part="P+23" gate="1" pin="+5V"/>
+<junction x="389.89" y="143.51"/>
+<label x="395.732" y="143.51" size="1.778" layer="95"/>
+<label x="395.478" y="138.43" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -15456,21 +15454,34 @@ Decoupling caps are now closer to MCU on brd.</text>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="426.72" y1="137.16" x2="426.72" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="426.72" y1="114.3" x2="426.72" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="ETH1" gate="G$1" pin="SHD1"/>
+<wire x1="426.72" y1="114.3" x2="426.72" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="457.2" y1="116.84" x2="454.66" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="454.66" y1="116.84" x2="454.66" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="ETH1" gate="G$1" pin="SHD2"/>
 <wire x1="454.66" y1="114.3" x2="457.2" y2="114.3" width="0.1524" layer="91"/>
 <junction x="454.66" y="114.3"/>
 <wire x1="454.66" y1="114.3" x2="426.72" y2="114.3" width="0.1524" layer="91"/>
-<junction x="426.72" y="114.3"/>
-<pinref part="ETH1" gate="G$1" pin="5"/>
-<wire x1="457.2" y1="137.16" x2="426.72" y2="137.16" width="0.1524" layer="91"/>
-<label x="452.12" y="137.16" size="1.778" layer="95"/>
 <label x="452.12" y="116.84" size="1.778" layer="95"/>
 <label x="447.04" y="114.3" size="1.778" layer="95"/>
+<pinref part="ETH1" gate="G$1" pin="8"/>
+<wire x1="457.2" y1="129.54" x2="426.72" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="426.72" y1="129.54" x2="426.72" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="ETH1" gate="G$1" pin="7"/>
+<wire x1="457.2" y1="132.08" x2="426.72" y2="132.08" width="0.1524" layer="91"/>
+<junction x="426.72" y="129.54"/>
+<pinref part="ETH1" gate="G$1" pin="6"/>
+<wire x1="426.72" y1="132.08" x2="426.72" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="457.2" y1="134.62" x2="426.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="426.72" y1="134.62" x2="426.72" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="ETH1" gate="G$1" pin="5"/>
+<wire x1="457.2" y1="137.16" x2="426.72" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="426.72" y1="137.16" x2="426.72" y2="134.62" width="0.1524" layer="91"/>
+<junction x="426.72" y="134.62"/>
+<label x="451.612" y="137.16" size="1.778" layer="95"/>
+<label x="451.866" y="134.62" size="1.778" layer="95"/>
+<label x="451.866" y="132.334" size="1.778" layer="95"/>
+<label x="451.612" y="129.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP6" gate="G$1" pin="GND"/>
@@ -15921,11 +15932,6 @@ Decoupling caps are now closer to MCU on brd.</text>
 </net>
 <net name="EXTRA_SIG" class="0">
 <segment>
-<pinref part="ETH1" gate="G$1" pin="2"/>
-<label x="440.436" y="145.034" size="1.778" layer="95"/>
-<wire x1="457.2" y1="144.78" x2="441.96" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R25" gate="G$1" pin="2"/>
 <pinref part="R26" gate="G$1" pin="2"/>
 <wire x1="467.36" y1="327.66" x2="468.63" y2="327.66" width="0.1524" layer="91"/>
@@ -15934,6 +15940,12 @@ Decoupling caps are now closer to MCU on brd.</text>
 <junction x="468.63" y="327.66"/>
 <wire x1="468.63" y1="334.01" x2="485.394" y2="334.01" width="0.1524" layer="91"/>
 <label x="485.14" y="334.264" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="ETH1" gate="G$1" pin="2"/>
+<wire x1="457.2" y1="144.78" x2="441.706" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="441.706" y1="144.78" x2="441.706" y2="144.526" width="0.1524" layer="91"/>
+<label x="441.706" y="145.034" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RXD" class="0">
@@ -15989,6 +16001,11 @@ Decoupling caps are now closer to MCU on brd.</text>
 <pinref part="U$8" gate="G$1" pin="1A"/>
 <label x="408.94" y="88.9" size="1.016" layer="95"/>
 </segment>
+<segment>
+<pinref part="ETH1" gate="G$1" pin="3"/>
+<wire x1="457.2" y1="142.24" x2="441.96" y2="142.24" width="0.1524" layer="91"/>
+<label x="441.706" y="142.24" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ESTOP2" class="0">
 <segment>
@@ -16006,6 +16023,12 @@ Decoupling caps are now closer to MCU on brd.</text>
 <wire x1="416.56" y1="86.36" x2="408.94" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U$8" gate="G$1" pin="1B"/>
 <label x="408.94" y="86.36" size="1.016" layer="95"/>
+</segment>
+<segment>
+<pinref part="ETH1" gate="G$1" pin="4"/>
+<wire x1="457.2" y1="139.7" x2="441.96" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="441.96" y1="139.7" x2="441.96" y2="140.208" width="0.1524" layer="91"/>
+<label x="441.706" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="H2_REMOTE" class="0">
@@ -16036,24 +16059,6 @@ Decoupling caps are now closer to MCU on brd.</text>
 <pinref part="P+12" gate="1" pin="+12V"/>
 </segment>
 <segment>
-<pinref part="ETH1" gate="G$1" pin="6"/>
-<label x="449.58" y="134.62" size="1.778" layer="95"/>
-<pinref part="P+17" gate="1" pin="+12V"/>
-<wire x1="457.2" y1="134.62" x2="434.34" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="434.34" y1="134.62" x2="434.34" y2="143.51" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+19" gate="1" pin="+12V"/>
-<wire x1="391.16" y1="143.51" x2="391.16" y2="138.43" width="0.1524" layer="91"/>
-<pinref part="E1" gate="G$1" pin="4"/>
-<wire x1="400.05" y1="138.43" x2="391.16" y2="138.43" width="0.1524" layer="91"/>
-<label x="394.97" y="138.43" size="1.778" layer="95"/>
-<pinref part="E1" gate="G$1" pin="3"/>
-<wire x1="400.05" y1="143.51" x2="391.16" y2="143.51" width="0.1524" layer="91"/>
-<label x="394.97" y="143.51" size="1.778" layer="95"/>
-<junction x="391.16" y="143.51"/>
-</segment>
-<segment>
 <pinref part="P+2" gate="1" pin="+12V"/>
 <pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="356.87" x2="30.48" y2="353.06" width="0.1524" layer="91"/>
@@ -16078,6 +16083,16 @@ Decoupling caps are now closer to MCU on brd.</text>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="124.46" y1="333.248" x2="124.46" y2="330.2" width="0.1524" layer="91"/>
 <pinref part="P+16" gate="1" pin="+12V"/>
+</segment>
+<segment>
+<pinref part="E1" gate="G$1" pin="2"/>
+<pinref part="P+19" gate="1" pin="+12V"/>
+<wire x1="400.05" y1="148.59" x2="383.54" y2="148.59" width="0.1524" layer="91"/>
+<pinref part="E1" gate="G$1" pin="5"/>
+<wire x1="400.05" y1="133.35" x2="383.54" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="383.54" y1="133.35" x2="383.54" y2="148.59" width="0.1524" layer="91"/>
+<label x="395.224" y="133.35" size="1.778" layer="95"/>
+<label x="395.224" y="148.844" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -16443,11 +16458,6 @@ Decoupling caps are now closer to MCU on brd.</text>
 </segment>
 </net>
 <net name="5V_FROM_FCC" class="0">
-<segment>
-<pinref part="ETH1" gate="G$1" pin="8"/>
-<label x="436.88" y="129.54" size="1.778" layer="95"/>
-<wire x1="457.2" y1="129.54" x2="452.12" y2="129.54" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <wire x1="462.28" y1="160.02" x2="457.2" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="JP5" gate="G$1" pin="3"/>
